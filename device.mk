@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
 # OPlus Camera
 $(call inherit-product-if-exists, vendor/oplus/camera/giulia/opluscamera.mk)
 
+# NFC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
 # Face unlock
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
@@ -104,7 +108,8 @@ $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus_sm865
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    libui-stock_symlink
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)

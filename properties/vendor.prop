@@ -16,3 +16,6 @@ ro.vendor.oplus.market.name=OnePlus 13R
 
 # USB
 vendor.usb.product_string=OnePlus 13R
+
+# Telephony
+persist.vendor.tcmd.feature=0

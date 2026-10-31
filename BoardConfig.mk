@@ -32,6 +32,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # SEPolicy
 include hardware/oplus/sepolicy/common/SEPolicy.mk
+include vendor/oplus/camera/sepolicy/SEPolicy.mk
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
