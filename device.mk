@@ -125,8 +125,9 @@ PRODUCT_PACKAGES += \
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
-# OPlus sensor calibration VINTF manifest (ODM)
-ODM_MANIFEST_FILES += vendor/oneplus/giulia/proprietary/odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
+# OPlus sensor calibration VINTF manifest (ODM fragment)
+PRODUCT_PACKAGES += \
+    manifest_oplusSensor_aidl.xml
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/giulia/giulia-vendor.mk)

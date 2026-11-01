@@ -21,3 +21,11 @@ install_symlink {
     installed_location: "lib64/libui-stock.so",
     symlink_target: "libui.so",
 }
+
+prebuilt_etc_xml {
+    name: "manifest_oplusSensor_aidl.xml",
+    src: "manifest_oplusSensor_aidl.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
+}
