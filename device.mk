@@ -45,9 +45,21 @@ PRODUCT_PACKAGES += \
 # OPlus Camera
 $(call inherit-product-if-exists, vendor/oplus/camera/giulia/opluscamera.mk)
 
-# NFC
+# NFC, FusionLight, Sensor Calibration, Widevine & Dolby Blobs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+    vendor/oneplus/giulia/proprietary/odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service \
+    vendor/oneplus/giulia/proprietary/odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc \
+    vendor/oneplus/giulia/proprietary/odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest/manifest_oplusSensor_aidl.xml \
+    vendor/oneplus/giulia/proprietary/odm/etc/fusionlight_profile/fusionlight_Main_1_3.json:$(TARGET_COPY_OUT_ODM)/etc/fusionlight_profile/fusionlight_Main_1_3.json \
+    vendor/oneplus/giulia/proprietary/odm/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_ODM)/lib64/liboemcrypto.so \
+    vendor/oneplus/giulia/proprietary/product/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/dolby_vision.cfg \
+    vendor/oneplus/giulia/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
+    vendor/oneplus/giulia/proprietary/vendor/etc/display_apollo_list_AA577_P_3_A0020_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_apollo_list_AA577_P_3_A0020_dsc_cmd_mode_panel.xml \
+    vendor/oneplus/giulia/proprietary/vendor/etc/libnfc-nci-NXP.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci-NXP.conf \
+    vendor/oneplus/giulia/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    vendor/oneplus/giulia/proprietary/vendor/etc/media_codecs_dolby_vision.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_vision.xml \
+    vendor/oneplus/giulia/proprietary/vendor/firmware/sn220u.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/sn220u.bin \
+    vendor/oneplus/giulia/proprietary/vendor/lib64/libiccprofile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libiccprofile.so
 
 # Face unlock
 PRODUCT_COPY_FILES += \
