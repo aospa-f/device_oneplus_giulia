@@ -15,12 +15,6 @@ install_symlink {
     symlink_target: "/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
 
-install_symlink {
-    name: "libui-stock_symlink",
-    vendor: true,
-    installed_location: "lib64/libui-stock.so",
-    symlink_target: "libui.so",
-}
 
 prebuilt_etc_xml {
     name: "manifest_oplusSensor_aidl.xml",
@@ -133,5 +127,2118 @@ prebuilt_etc_xml {
     src: "manifest_oplus_face.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
+    device_specific: true,
+}
+
+// Restored known-good vendor/ODM prebuilts
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_imscmservice_2_0_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.imscmservice@2.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.imscmservice@2.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_imscmservice_2_1_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.imscmservice@2.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.imscmservice@2.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_imscmservice_2_2_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.imscmservice@2.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.imscmservice@2.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_uceservice_2_0_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.uceservice@2.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.uceservice@2.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_uceservice_2_1_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.uceservice@2.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.uceservice@2.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_uceservice_2_2_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.uceservice@2.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.uceservice@2.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_com_qualcomm_qti_uceservice_2_3_so",
+    owner: "oneplus",
+    stem: "com.qualcomm.qti.uceservice@2.3.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/com.qualcomm.qti.uceservice@2.3.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libdumpstateutil_so",
+    owner: "oneplus",
+    stem: "libdumpstateutil.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libdumpstateutil.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_liblocation_qesdk_so",
+    owner: "oneplus",
+    stem: "liblocation_qesdk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/liblocation_qesdk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libpasrutils_so",
+    owner: "oneplus",
+    stem: "libpasrutils.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libpasrutils.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libpsi_so",
+    owner: "oneplus",
+    stem: "libpsi.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libpsi.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libqesdk2_0_so",
+    owner: "oneplus",
+    stem: "libqesdk2_0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libqesdk2_0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libqesdk_manager_so",
+    owner: "oneplus",
+    stem: "libqesdk_manager.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libqesdk_manager.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libqesdoem_query_sys_so",
+    owner: "oneplus",
+    stem: "libqesdoem_query_sys.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libqesdoem_query_sys.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libqms_so",
+    owner: "oneplus",
+    stem: "libqms.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libqms.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libui_stock_so",
+    owner: "oneplus",
+    stem: "libui-stock.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libui-stock.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libvui_dmgr_so",
+    owner: "oneplus",
+    stem: "libvui_dmgr.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libvui_dmgr.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_libvui_dmgr_client_so",
+    owner: "oneplus",
+    stem: "libvui_dmgr_client.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/libvui_dmgr_client.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_data_factoryservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.data.factoryservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.data.factoryservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_data_mwqem_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.data.mwqem@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.data.mwqem@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_data_mwqemaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.data.mwqemaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.data.mwqemaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_data_slm_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.data.slm@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.data.slm@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_cneaidlservice_internal_api_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_cneaidlservice_internal_constants_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_cneaidlservice_internal_server_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_connection_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.connection@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.connection@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_connection_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.connection@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.connection@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_connectionfactory_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.connectionfactory-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.connectionfactory-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_dataactivity_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.dataactivity-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.dataactivity-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_dynamicdds_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.dynamicdds@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.dynamicdds@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_dynamicdds_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.dynamicdds@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.dynamicdds@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_dynamicddsaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_flow_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.flow@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.flow@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_flow_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.flow@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.flow@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_flowaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.flowaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.flowaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_iwlandata_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.iwlandata-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.iwlandata-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_ka_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.ka-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.ka-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_latency_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.latency@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.latency@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_lce_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.lce@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.lce@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_lceaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.lceaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.lceaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_data_qmiaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_dpmservice_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.dpmservice@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.dpmservice@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_embmssl_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.embmssl@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.embmssl@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_embmssl_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.embmssl@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.embmssl@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_fm_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.fm@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.fm@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_limits_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.limits@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.limits@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_limits_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.limits@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.limits@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_mwqemadapter_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.mwqemadapter@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.mwqemadapter@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_mwqemadapteraidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_qxr_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.qxr-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.qxr-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_am_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.am@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.am@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_3_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.3.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.3.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_4_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.4.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.4.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_5_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.5.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.5.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_6_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.6.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.6.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_7_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.7.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.7.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_ims_1_8_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.ims@1.8.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.ims@1.8.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_lpa_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.lpa@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.lpa@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_lpa_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.lpa@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.lpa@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_lpa_1_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.lpa@1.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.lpa@1.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qcrilhook_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qcrilhook@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qcrilhook@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_3_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.3.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.3.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_4_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.4.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.4.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_5_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.5.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.5.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_qtiradio_2_6_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.6.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.qtiradio@2.6.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_1_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim@1.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim@1.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_remote_client_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim_remote_client@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_remote_client_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim_remote_client@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_remote_client_1_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_radio_uim_remote_server_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.radio.uim_remote_server@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.radio.uim_remote_server@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_slmadapter_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.slmadapter@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.slmadapter@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_hardware_vpp_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.hardware.vpp-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.hardware.vpp-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_callcapability_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.callcapability@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.callcapability@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_callcapabilityaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.callcapabilityaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.callcapabilityaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_callinfo_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.callinfo@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.callinfo@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_configaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.configaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.configaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_connectionaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.connectionaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.connectionaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_factory_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.factory@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.factory@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_factory_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.factory@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.factory@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_factoryaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.factoryaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.factoryaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcsconfig_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcsconfig@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcsconfig@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcsconfig_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcsconfig@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcsconfig@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcsconfig_2_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcsconfig@2.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcsconfig@2.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcsconfig_2_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcsconfig@2.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcsconfig@2.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcssipaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcssipaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcssipaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_ims_rcsuceaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.ims.rcsuceaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_latency_2_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.latency@2.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.latency@2.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_latency_2_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.latency@2.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.latency@2.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_latency_2_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.latency@2.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.latency@2.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_latencyaidlservice_V1_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.latencyaidlservice-V1-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.latencyaidlservice-V1-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_memory_pasrmanager_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.memory.pasrmanager@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.memory.pasrmanager@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_memory_pasrmanager_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.memory.pasrmanager@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.memory.pasrmanager@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhal_impl_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhal-impl.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhal-impl.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhal_1_0_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhal@1.0.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhal@1.0.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhal_1_1_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhal@1.1.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhal@1.1.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhal_1_2_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhal@1.2.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhal@1.2.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhal_1_3_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhal@1.3.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhal@1.3.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdhalaidl_V2_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdhalaidl-V2-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdhalaidl-V2-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdsys_V3_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdsys-V3-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdsys-V3-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_vendor_vendor_qti_qesdsys_V4_ndk_so",
+    owner: "oneplus",
+    stem: "vendor.qti.qesdsys-V4-ndk.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor_libs/vendor.qti.qesdsys-V4-ndk.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+install_symlink {
+    name: "giulia_vendor_libEGL_adreno_so_symlink",
+    vendor: true,
+    installed_location: "lib64/libEGL_adreno.so",
+    symlink_target: "egl/libEGL_adreno.so",
+}
+
+install_symlink {
+    name: "giulia_vendor_libGLESv2_adreno_so_symlink",
+    vendor: true,
+    installed_location: "lib64/libGLESv2_adreno.so",
+    symlink_target: "egl/libGLESv2_adreno.so",
+}
+
+install_symlink {
+    name: "giulia_vendor_libq3dtools_adreno_so_symlink",
+    vendor: true,
+    installed_location: "lib64/libq3dtools_adreno.so",
+    symlink_target: "egl/libq3dtools_adreno.so",
+}
+
+cc_prebuilt_library_shared {
+    name: "giulia_odm_libOplusSecurity_so",
+    owner: "oneplus",
+    stem: "libOplusSecurity.so",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/odm_libs/libOplusSecurity.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
     device_specific: true,
 }

@@ -140,8 +140,7 @@ $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus_sm865
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink \
-    libui-stock_symlink
+    firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
@@ -152,3 +151,5 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/giulia/giulia-vendor.mk)
+
+include $(LOCAL_PATH)/vendor_libs.mk
