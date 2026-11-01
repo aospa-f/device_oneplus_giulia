@@ -84,3 +84,48 @@ cc_prebuilt_binary {
     relative_install_path: "hw",
     device_specific: true,
 }
+
+cc_prebuilt_binary {
+    name: "vendor.oplus.hardware.biometrics.face@1.0-service_uff",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor.oplus.hardware.biometrics.face@1.0-service_uff",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstfaceunlockocl_uff",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/libstfaceunlockocl_uff.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    device_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "manifest_oplus_face.xml",
+    src: "manifest_oplus_face.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
+}

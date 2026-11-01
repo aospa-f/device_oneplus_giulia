@@ -63,9 +63,27 @@ PRODUCT_PACKAGES += \
     liboemcrypto \
     vendor-oplus-hardware-oplusSensor-V1-service
 
+# Face HAL and its vendor NDK dependencies
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face-V3-ndk \
+    libcamera2ndk_vendor \
+    libstfaceunlockocl_uff \
+    manifest_oplus_face.xml \
+    vendor.oplus.hardware.biometrics.face@1.0-service_uff
+
+# OPlus sensor feature service is disabled in its stock rc; start it explicitly
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.oplus.sensor.lowmem=false
+
 # Face unlock
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml \
+    vendor/oneplus/giulia/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc \
+    vendor/oneplus/giulia/proprietary/odm/init.oplus.face.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.oplus.face.rc
+
+# OPlus sensor feature service auto-start
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init.oplusSensor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.oplusSensor.rc
 
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
