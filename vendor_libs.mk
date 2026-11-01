@@ -15,7 +15,6 @@ PRODUCT_PACKAGES += \
     giulia_vendor_libqesdk_manager_so \
     giulia_vendor_libqesdoem_query_sys_so \
     giulia_vendor_libqms_so \
-    giulia_vendor_libui_stock_so \
     giulia_vendor_libvui_dmgr_so \
     giulia_vendor_libvui_dmgr_client_so \
     giulia_vendor_vendor_qti_data_factoryservice_V1_ndk_so \
@@ -109,7 +108,4 @@ PRODUCT_PACKAGES += \
     giulia_vendor_vendor_qti_qesdhalaidl_V2_ndk_so \
     giulia_vendor_vendor_qti_qesdsys_V3_ndk_so \
     giulia_vendor_vendor_qti_qesdsys_V4_ndk_so \
-    giulia_vendor_libEGL_adreno_so_symlink \
-    giulia_vendor_libGLESv2_adreno_so_symlink \
-    giulia_vendor_libq3dtools_adreno_so_symlink \
     giulia_odm_libOplusSecurity_so

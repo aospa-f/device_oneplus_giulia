@@ -417,24 +417,6 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "giulia_vendor_libui_stock_so",
-    owner: "oneplus",
-    stem: "libui-stock.so",
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    target: {
-        android_arm64: {
-            srcs: [
-                "prebuilts/vendor_libs/libui-stock.so",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    vendor: true,
-}
 
 cc_prebuilt_library_shared {
     name: "giulia_vendor_libvui_dmgr_so",
@@ -2203,26 +2185,8 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
-install_symlink {
-    name: "giulia_vendor_libEGL_adreno_so_symlink",
-    vendor: true,
-    installed_location: "lib64/libEGL_adreno.so",
-    symlink_target: "egl/libEGL_adreno.so",
-}
 
-install_symlink {
-    name: "giulia_vendor_libGLESv2_adreno_so_symlink",
-    vendor: true,
-    installed_location: "lib64/libGLESv2_adreno.so",
-    symlink_target: "egl/libGLESv2_adreno.so",
-}
 
-install_symlink {
-    name: "giulia_vendor_libq3dtools_adreno_so_symlink",
-    vendor: true,
-    installed_location: "lib64/libq3dtools_adreno.so",
-    symlink_target: "egl/libq3dtools_adreno.so",
-}
 
 cc_prebuilt_library_shared {
     name: "giulia_odm_libOplusSecurity_so",
@@ -2241,4 +2205,11 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     device_specific: true,
+}
+
+install_symlink {
+    name: "libui-stock_symlink",
+    vendor: true,
+    installed_location: "lib64/libui-stock.so",
+    symlink_target: "libui.so",
 }
