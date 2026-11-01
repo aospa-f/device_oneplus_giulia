@@ -97,6 +97,12 @@ cc_prebuilt_binary {
             srcs: [
                 "prebuilts/vendor.oplus.hardware.biometrics.face@1.0-service_uff",
             ],
+            shared_libs: [
+                "android.hardware.biometrics.common-V3-ndk",
+                "android.hardware.biometrics.face-V3-ndk",
+                "libcamera2ndk_vendor",
+                "libstfaceunlockocl_uff",
+            ],
         },
     },
     compile_multilib: "64",
