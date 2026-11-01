@@ -29,3 +29,58 @@ prebuilt_etc_xml {
     sub_dir: "vintf/manifest",
     device_specific: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "libiccprofile",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/libiccprofile.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboemcrypto",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/liboemcrypto.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor-oplus-hardware-oplusSensor-V1-service",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm64: {
+            srcs: [
+                "prebuilts/vendor-oplus-hardware-oplusSensor-V1-service",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    device_specific: true,
+}
