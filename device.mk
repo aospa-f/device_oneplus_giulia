@@ -49,7 +49,6 @@ $(call inherit-product-if-exists, vendor/oplus/camera/giulia/opluscamera.mk)
 PRODUCT_COPY_FILES += \
     vendor/oneplus/giulia/proprietary/odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service \
     vendor/oneplus/giulia/proprietary/odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc \
-    vendor/oneplus/giulia/proprietary/odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest/manifest_oplusSensor_aidl.xml \
     vendor/oneplus/giulia/proprietary/odm/etc/fusionlight_profile/fusionlight_Main_1_3.json:$(TARGET_COPY_OUT_ODM)/etc/fusionlight_profile/fusionlight_Main_1_3.json \
     vendor/oneplus/giulia/proprietary/odm/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_ODM)/lib64/liboemcrypto.so \
     vendor/oneplus/giulia/proprietary/product/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/dolby_vision.cfg \
@@ -125,6 +124,9 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
+
+# OPlus sensor calibration VINTF manifest (ODM)
+ODM_MANIFEST_FILES += vendor/oneplus/giulia/proprietary/odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/giulia/giulia-vendor.mk)
