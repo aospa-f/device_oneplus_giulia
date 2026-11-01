@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
     giulia_vendor_com_qualcomm_qti_uceservice_2_1_so \
     giulia_vendor_com_qualcomm_qti_uceservice_2_2_so \
     giulia_vendor_com_qualcomm_qti_uceservice_2_3_so \
-    giulia_vendor_libdumpstateutil_so \
     giulia_vendor_liblocation_qesdk_so \
     giulia_vendor_libpasrutils_so \
     giulia_vendor_libpsi_so \
