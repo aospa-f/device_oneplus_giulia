@@ -1789,5 +1789,3 @@ odm/etc/wifi/kiwi/regdb.bin
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Extra vendor/ODM libraries present in 16.0.10.600
-vendor/lib64/libiccprofile.so
-odm/lib64/libOplusSecurity.so
