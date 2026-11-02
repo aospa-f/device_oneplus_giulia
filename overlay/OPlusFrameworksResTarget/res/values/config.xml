@@ -148,4 +148,20 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.settings.device.KeyHandler</item>
     </string-array>
+
+    <!-- Screen off touch gestures. Key codes come from the OPlus/Synaptics touch HAL:
+         246 + gesture id. -->
+    <bool name="config_enableKeyHandler">true</bool>
+    <integer name="config_drawArrowLeftKeyCode">250</integer>
+    <integer name="config_drawArrowRightKeyCode">251</integer>
+    <integer name="config_drawOKeyCode">252</integer>
+    <integer name="config_oneFingerSwipeUpKeyCode">257</integer>
+    <integer name="config_oneFingerSwipeDownKeyCode">256</integer>
+
+    <!-- Default actions: previous, next, play/pause, volume up, volume down -->
+    <integer name="config_drawArrowLeftDefault">7</integer>
+    <integer name="config_drawArrowRightDefault">6</integer>
+    <integer name="config_drawODefault">5</integer>
+    <integer name="config_oneFingerSwipeUpDefault">10</integer>
+    <integer name="config_oneFingerSwipeDownDefault">11</integer>
 </resources>
