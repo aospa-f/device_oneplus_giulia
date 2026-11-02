@@ -159,8 +159,8 @@
     <integer name="config_oneFingerSwipeDownKeyCode">256</integer>
 
     <!-- Default actions: previous, next, play/pause, volume up, volume down -->
-    <integer name="config_drawArrowLeftDefault">7</integer>
-    <integer name="config_drawArrowRightDefault">6</integer>
+    <integer name="config_drawArrowLeftDefault">6</integer>
+    <integer name="config_drawArrowRightDefault">7</integer>
     <integer name="config_drawODefault">5</integer>
     <integer name="config_oneFingerSwipeUpDefault">10</integer>
     <integer name="config_oneFingerSwipeDownDefault">11</integer>
