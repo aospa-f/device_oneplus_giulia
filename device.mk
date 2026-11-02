@@ -26,11 +26,6 @@ TARGET_SCREEN_WIDTH := 1264
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946652107814787.xml
 
-# Dolby
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.ronard \
-    android.hardware.media.c2@1.0_symlink
-
 # Dolby Vision
 $(call soong_config_set_bool,dolby_vision,target_supports_dolby_vision,true)
 

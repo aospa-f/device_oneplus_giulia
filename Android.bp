@@ -1,4 +1,7 @@
 soong_namespace {
+    imports: [
+        "vendor/sony/dolby",
+    ],
 }
 
 install_symlink {
@@ -13,36 +16,4 @@ install_symlink {
     vendor: true,
     installed_location: "firmware/wlan/WCNSS_qcom_cfg.ini",
     symlink_target: "/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
-}
-
-// Ronard's 568080-byte android.hardware.media.c2@1.0.so is built without CFI
-// and is compatible with the Sony Dolby C2 service. The AOSPA source-built
-// HIDL interface lib crashes the service, and the stock 16.0.10.600 lib fails
-// its CFI check against AOSPA's libhidlbase.
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.c2@1.0.ronard",
-    owner: "ronard",
-    soc_specific: true,
-    compile_multilib: "64",
-    stem: "android.hardware.media.c2@1.0",
-    relative_install_path: "dolby",
-    overrides: ["android.hardware.media.c2@1.0"],
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,
-    target: {
-        android_arm64: {
-            srcs: [
-                "prebuilt/vendor/lib64/android.hardware.media.c2@1.0.so",
-            ],
-        },
-    },
-}
-
-install_symlink {
-    name: "android.hardware.media.c2@1.0_symlink",
-    vendor: true,
-    installed_location: "lib64/android.hardware.media.c2@1.0.so",
-    symlink_target: "/vendor/lib64/dolby/android.hardware.media.c2@1.0.so",
 }
