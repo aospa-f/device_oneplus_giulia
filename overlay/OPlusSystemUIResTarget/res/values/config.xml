@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The Paranoid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Keep notifications collapsed when the shade is opened. -->
+    <bool name="config_autoExpandFirstNotification">false</bool>
+</resources>
