@@ -16,9 +16,6 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
-from extract_utils_oplus import (
-    add_generated_thermal_engine_config,
-)
 
 namespace_imports = [
     'hardware/oplus',
@@ -104,10 +101,6 @@ module = ExtractUtilsModule(
     add_firmware_proprietary_file=True,
 )
 
-add_generated_thermal_engine_config(
-    module,
-    horae_target_config='system_ext/etc/horae/horae_SM8650.conf',
-)
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(

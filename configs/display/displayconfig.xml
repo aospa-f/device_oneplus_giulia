@@ -627,4 +627,17 @@
             </brightnessThresholdPoints>
         </darkeningThresholds>
     </ambientBrightnessChangeThresholdsIdle>
+    <idleScreenRefreshRateTimeout>
+        <luxThresholds>
+            <point>
+                <lux>0</lux>
+                <timeout>1000</timeout>
+            </point>
+            <point>
+                <lux>10</lux>
+                <timeout>800</timeout>
+            </point>
+        </luxThresholds>
+    </idleScreenRefreshRateTimeout>
+    <supportsVrr>true</supportsVrr>
 </displayConfiguration>
